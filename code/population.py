@@ -193,7 +193,7 @@ class Population(object):
         thetas = np.atleast_2d(thetas)
         grids = np.array([self.evaluate(t)[vm] for t in thetas])
 
-        fig = pl.figure(figsize=(10, 10))
+        fig = pl.figure(figsize=(14, 14))
         ax = pl.axes([0.1, 0.1, 0.6, 0.6])
 
         ax_top = pl.axes([0.1, 0.7, 0.6, 0.2])
@@ -213,7 +213,7 @@ class Population(object):
         cb.locator = MaxNLocator(5)
         cb.update_ticks()
         ax_cb.set_ylabel(r"$\Gamma(w)$", rotation=270)
-        ax_cb.yaxis.set_label_coords(6.0, 0.5)
+        ax_cb.yaxis.set_label_coords(6.5, 0.5)
 
         # Plot the occurence histograms.
         ys = [logsumexp(grids
@@ -295,10 +295,10 @@ class Population(object):
         ax_right.xaxis.set_major_locator(MaxNLocator(4))
 
         if labels is not None:
-            ax.set_xlabel(labels[0])
-            ax.set_ylabel(labels[1])
-            ax_top.set_ylabel("$p(${0}$)$".format(labels[0]))
-            ax_right.set_xlabel("$p(${0}$)$".format(labels[1]))
+            ax.set_xlabel(labels[0],y=1.02)
+            ax.set_ylabel(labels[1],y=1.02)
+            ax_top.set_ylabel("$p(${0}$)$".format(labels[0]),y=1.02)
+            ax_right.set_xlabel("$p(${0}$)$".format(labels[1]),y=1.02)
 
         # Add the linear axes along the top if requested.
         if top_axes is not None:
@@ -317,8 +317,8 @@ class Population(object):
             a2.yaxis.set_label_coords(1.3, 0.5)
 
         for a in [ax, ax_top, ax_right]:
-            a.xaxis.set_label_coords(0.5, -0.07)
-            a.yaxis.set_label_coords(-0.08, 0.5)
+            a.xaxis.set_label_coords(0.5, -0.08)
+            a.yaxis.set_label_coords(-0.12, 0.5)
 
         return fig
 
