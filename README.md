@@ -11,7 +11,8 @@ project for Harvard's Exoplanets astronomy course (ASTRO189) to make things
 more amenable to running iteractively in an IPython Notebook.
 
 The code lives in the `code` directory and the LaTeX source code for the
-original paper is in `document`.
+original paper is in `document`. The final report for class is located in
+`report`, which also contains a bunch of associated output plots.
 
 **Code**
 
@@ -33,7 +34,8 @@ Results
 
 The original simulated catalogs and results are [available online on figshare](
 http://dx.doi.org/10.6084/m9.figshare.1051864). The new catalogs used for my project
-can be found in the `data\` folder.
+can be found in the `data\` folder. I've also downloaded the chains and catalogs
+used in the original paper, which are located there as well.
 
 Attribution
 -----------
@@ -58,6 +60,7 @@ License
 -------
 
 Copyright 2014 Daniel Foreman-Mackey (who pretty much did everything)
+
 Copyright 2016 Joshua Speagle (who is immensely grateful for DFM providing this fantastic public code)
 
 The code in this repository is made available under the terms of the MIT
